@@ -1,7 +1,7 @@
-var sec=00
-var min=00
-var hr=00
-var time
+let sec=00
+let min=00
+let hr=00
+let interval = null
 
 
 function digits(digit) {
@@ -15,16 +15,21 @@ function digits(digit) {
 }
 
 function start() {
+    if (interval) {
+        return
+    };
+
+    interval = setInterval(stopwatch, 1000);
     stopwatch()
-    time = setInterval(stopwatch, 1000)
-}
+};
 
 function pause() {
-    clearInterval(time);
+    clearInterval(interval);
+    interval= null;
 }
 
 function redefined() {
-    clearInterval(time);
+    pause()
     sec=00;
     min=00;
     hr=00;
