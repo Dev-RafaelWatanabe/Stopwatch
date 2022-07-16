@@ -14,10 +14,14 @@ function digits(digit) {
     
 }
 
+
 function start() {
     if (interval) {
-        return
+        return 
     };
+
+    document.getElementById("start").style.display = 'none';
+    document.getElementById("pause").style.display = 'inline';
 
     interval = setInterval(stopwatch, 1000);
     stopwatch()
@@ -26,6 +30,10 @@ function start() {
 function pause() {
     clearInterval(interval);
     interval= null;
+
+    document.getElementById("start").style.display = 'inline';
+    document.getElementById("pause").style.display = 'none';
+
 }
 
 function redefined() {

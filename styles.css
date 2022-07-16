@@ -23,18 +23,19 @@ button:hover {
     cursor: pointer;
 }
 
-.start {
+#start {
     background: rgb(57, 218, 57);
     margin-right: 1rem;
     height: 2rem;
     width: 5rem;
 }
 
-.pause {
+#pause {
     background: rgb(199, 40, 40);
     margin-right: 1rem;
     height: 2rem;
     width: 5rem;
+    display: none;
 }
 
 .redefined {
